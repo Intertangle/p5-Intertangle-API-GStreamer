@@ -3,6 +3,7 @@ native:
     packages:
       - gir1.2-gstreamer-1.0
       - gir1.2-gst-plugins-base-1.0
+      - gstreamer1.0-plugins-good
       - pkg-config
       - libgirepository1.0-dev
       - gobject-introspection
@@ -10,9 +11,11 @@ native:
     packages:
       - gstreamer
       - gst-plugins-base
+      - gst-plugins-good
       - gobject-introspection
   msys2-mingw64:
     packages:
       - mingw-w64-x86_64-gstreamer
       - mingw-w64-x86_64-gst-plugins-base
+      - mingw-w64-x86_64-gst-plugins-good
       - mingw-w64-x86_64-gobject-introspection
