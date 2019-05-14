@@ -1,5 +1,6 @@
 use Renard::Incunabula::Common::Setup;
 package Renard::API::GStreamer;
+# ABSTRACT: Setup GStreamer
 
 use strict;
 use warnings;
