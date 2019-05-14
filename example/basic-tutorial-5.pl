@@ -21,6 +21,7 @@ use Glib qw(TRUE FALSE);
 use Renard::API::Gtk3::Helper;
 use Renard::API::Gtk3::WindowID;
 use Renard::API::GStreamer;
+use Renard::API::GStreamer::Integration::Gtk3;
 
 rw uri => (
 	required => 0,
@@ -133,17 +134,10 @@ through the VideoOverlay interface.
 
 =cut
 callback realize_cb ( (InstanceOf['Gtk3::Widget']) $widget, $self) {
-	my $window = $widget->get_window;
-	my $window_handle;
-
-	die("Couldn't create native window needed for GstVideoOverlay!")
-		unless($window->ensure_native);
-
-	# Retrieve window handler from GDK
-	$window_handle = Renard::API::Gtk3::WindowID->get_widget_id( $widget );
-
-	# Pass it to playbin, which implements VideoOverlay and will forward it to the video sink
-	$self->playbin->set_window_handle( $window_handle );
+	Renard::API::GStreamer::Integration::Gtk3->set_window_handle(
+		$self->playbin,
+		$widget
+	);
 }
 
 =callback play_cb
