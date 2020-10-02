@@ -1,5 +1,5 @@
 use Renard::Incunabula::Common::Setup;
-package Renard::API::GStreamer;
+package Intertangle::API::GStreamer;
 # ABSTRACT: Setup GStreamer
 
 use strict;
@@ -26,6 +26,6 @@ fun import(@) {
 1;
 =head1 SEE ALSO
 
-L<Repository information|http://project-renard.github.io/doc/development/repo/p5-Renard-API-GStreamer/>
+
 
 =cut

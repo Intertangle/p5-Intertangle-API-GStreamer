@@ -4,7 +4,7 @@
 
 =head1 NAME
 
-Renard::API::GStreamer - Setup GStreamer
+Intertangle::API::GStreamer - Setup GStreamer
 
 =head1 VERSION
 
@@ -12,15 +12,13 @@ version 0.001
 
 =head1 SEE ALSO
 
-L<Repository information|http://project-renard.github.io/doc/development/repo/p5-Renard-API-GStreamer/>
-
 =head1 AUTHOR
 
-Project Renard
+Zakariyya Mughal <zmughal@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2019 by Project Renard.
+This software is copyright (c) 2019 by Zakariyya Mughal.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

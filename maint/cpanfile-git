@@ -1,6 +1,6 @@
 requires 'Renard::Incunabula',
 	git => 'https://github.com/project-renard/p5-Renard-Incunabula.git',
 	branch => 'master';
-requires 'Renard::API::Gtk3',
-	git => 'https://github.com/project-renard/p5-Renard-API-Gtk3.git',
+requires 'Intertangle::API::Gtk3',
+	git => 'https://github.com/Intertangle/p5-Intertangle-API-Gtk3.git',
 	branch => 'master';

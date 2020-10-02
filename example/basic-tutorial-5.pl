@@ -18,10 +18,10 @@ use Type::Tie;
 use Mu;
 
 use Glib qw(TRUE FALSE);
-use Renard::API::Gtk3::Helper;
-use Renard::API::Gtk3::WindowID;
-use Renard::API::GStreamer;
-use Renard::API::GStreamer::Integration::Gtk3;
+use Intertangle::API::Gtk3::Helper;
+use Intertangle::API::Gtk3::WindowID;
+use Intertangle::API::GStreamer;
+use Intertangle::API::GStreamer::Integration::Gtk3;
 
 rw uri => (
 	required => 0,
@@ -134,7 +134,7 @@ through the VideoOverlay interface.
 
 =cut
 callback realize_cb ( (InstanceOf['Gtk3::Widget']) $widget, $self) {
-	Renard::API::GStreamer::Integration::Gtk3->set_window_handle(
+	Intertangle::API::GStreamer::Integration::Gtk3->set_window_handle(
 		$self->playbin,
 		$widget
 	);
@@ -238,7 +238,7 @@ method create_ui () {
 	$video_window->signal_connect( realize => \&realize_cb, $self );
 	$video_window->signal_connect( draw => \&draw_cb, $self );
 
-	my $small_toolbar = Renard::API::Gtk3::Helper->genum( 'Gtk3::IconSize', 'small-toolbar' );
+	my $small_toolbar = Intertangle::API::Gtk3::Helper->genum( 'Gtk3::IconSize', 'small-toolbar' );
 	$play_button = Gtk3::Button->new_from_icon_name ("media-playback-start", $small_toolbar);
 	$play_button->signal_connect( clicked => \&play_cb, $self );
 
